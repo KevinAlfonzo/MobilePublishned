@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Empleados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-searchbar [formControl]="searchControl" placeholder="Buscar por Nombre"></ion-searchbar>
+
+  <ion-button (click)="newEmpleado()">Nuevo Empleado</ion-button>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Empleados</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let empleado of empleados">
+      <ion-label>{{empleado.nombre}}, {{empleado.apellidopaterno}} {{empleado.apellidomaterno}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

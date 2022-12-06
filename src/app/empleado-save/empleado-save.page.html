@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nuevo Empleado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="empleadoForm" (ngSubmit)="registrarEmpleado()">
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input formControlName="nombre" placeholder="Ingrese el Nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido Paterno:</ion-label>
+      <ion-input formControlName="apellidopaterno" placeholder="Ingrese el Apellido Paterno" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido Materno:</ion-label>
+      <ion-input formControlName="apellidomaterno" placeholder="Ingrese el Apellido Materno" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefono:</ion-label>
+      <ion-input formControlName="telefono" placeholder="Ingrese los 9 dígitos" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input formControlName="email" placeholder="Ingrese el correo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>DNI:</ion-label>
+      <ion-input formControlName="dni" placeholder="Ingrese los 8 dígitos" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado:</ion-label>
+      <ion-input formControlName="estado" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Rol:</ion-label>
+      <ion-input formControlName="rol" placeholder="Ingrese el rol" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contraseña:</ion-label>
+      <ion-input formControlName="contraseña" placeholder="Ingrese la contraseña" type="password"></ion-input>
+    </ion-item>
+    <ion-button type="submit" color="success">
+      Registrar
+    </ion-button>
+    <ion-button [routerLink]="['../empleados']" type="button" color="danger">
+      Cancelar
+    </ion-button>
+  </form> 
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Clientes</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let cliente of clientes">
+      <ion-label>{{cliente.nombre}}, {{cliente.apellidopaterno}} {{cliente.apellidomaterno}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab>
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
