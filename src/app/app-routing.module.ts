@@ -26,6 +26,18 @@ const routes: Routes = [
   {
     path: 'empleado-save',
     loadChildren: () => import('./empleado-save/empleado-save.module').then( m => m.EmpleadoSavePageModule)
+  },
+  {
+    path: 'cliente-save',
+    loadChildren: () => import('./cliente-save/cliente-save.module').then( m => m.ClienteSavePageModule)
+  },
+  {
+    path: 'venta',
+    loadChildren: () => import('./venta/venta.module').then( m => m.VentaPageModule)
+  },
+  {
+    path: 'user-save',
+    loadChildren: () => import('./user-save/user-save.module').then( m => m.UserSavePageModule)
   }
 ];
 

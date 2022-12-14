@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Nuevo Empleado</ion-title>
+    <ion-title>Nuevo Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form [formGroup]="empleadoForm" (ngSubmit)="registrarEmpleado()">
+  <form [formGroup]="userForm" (ngSubmit)="registrarUsuario()">
     <ion-item>
       <ion-label position="stacked">Nombre:</ion-label>
-      <ion-input formControlName="nombre" placeholder="Ingrese el Nombre" type="text"></ion-input>
+      <ion-input formControlName="nombre" placeholder="Ingrese el Nombre" type="text" ></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Apellido Paterno:</ion-label>
@@ -39,10 +39,7 @@
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Rol:</ion-label>
-      <ion-select formControlName="rol" placeholder="Seleccione el rol">
-        <ion-select-option value="A">Administrador</ion-select-option>
-        <ion-select-option value="V">Vendedor</ion-select-option>
-      </ion-select>
+      <ion-input formControlName="rol" placeholder="Ingrese el rol" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Contraseña:</ion-label>
@@ -51,7 +48,7 @@
     <ion-button type="submit" color="success">
       Registrar
     </ion-button>
-    <ion-button [routerLink]="['../empleados']" type="button" color="danger">
+    <ion-button [routerLink]="['../login']" type="button" color="danger">
       Cancelar
     </ion-button>
   </form> 

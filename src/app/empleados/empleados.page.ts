@@ -32,6 +32,12 @@ export class EmpleadosPage implements OnInit {
     })
   }
 
+  logout() {
+    this.authService.deleteSession();
+    this.router.navigate(['login']).then();
+    console.log('A cerrado sesión: ', this.nombreUsuario)
+  }
+
   newEmpleado() {
     this.router.navigate(['empleado-save']).then();
   }
@@ -48,8 +54,18 @@ export class EmpleadosPage implements OnInit {
       })
     ).subscribe(res => {
       this.empleados = res;
-      console.log('Respuesta: ', res);
+      console.log('Search: ', res);
     })
   }
+
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      this.empleadoService.findAll().subscribe(res => {
+        this.empleados = res;
+        console.log('Reload: ', res);
+      })
+      event.target.complete();
+    }, 2000);
+  };
 
 }

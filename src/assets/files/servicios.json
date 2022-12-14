@@ -1,0 +1,167 @@
+{
+    "data":[
+        {
+          "id": 1,
+          "categoria": "Diseño Publicitario",
+          "nombre": "Portada de FanPage",
+          "precio": 63,
+          "descripcion": "Transmitimos mediante una imagen los valores y la identidad corporativa de tu negocio en el proceso de la creación de su marca por un Logo.",
+          "estado": "A",
+          "imagen": "PortadaFanPage.png"
+        },
+        {
+          "id": 2,
+          "categoria": "Diseño Publicitario",
+          "nombre": "Creación de Logo",
+          "precio": 59,
+          "descripcion": "Transmitimos mediante una imagen los valores y la identidad corporativa de tu negocio en el proceso de la creación de su marca por un Logo.",
+          "estado": "A",
+          "imagen": "CreacionLogo.jpg"
+        },
+        {
+          "id": 3,
+          "categoria": "Diseño Publicitario",
+          "nombre": "Rediseño de Logo",
+          "precio": 63,
+          "descripcion": "Conservamos la esencia de tu logo sin alterar demasiado su imagen gráfica, pero dándole un nuevo aire más moderno y actual conservando ese carisma que lo identifica.",
+          "estado": "A",
+          "imagen": "RediseñoLogo.jpg"
+        },
+        {
+          "id": 4,
+          "categoria": "Diseño Publicitario",
+          "nombre": "Identidad de Marca",
+          "precio": 80,
+          "descripcion": "Integramos los aspectos que sustentan a tu marca, tanto en términos visuales como de experiencia y principios de tu negocio.",
+          "estado": "A",
+          "imagen": "IdentidadMarca.jpg"
+        },
+        {
+          "id": 5,
+          "categoria": "Diseño Publicitario",
+          "nombre": "Foto de perfil",
+          "precio": 71,
+          "descripcion": "La imagen que aparece en tus cuentas en línea, es la cara de tu negocio o empresa por eso debe destacar entre las demas.",
+          "estado": "A",
+          "imagen": "FotoDePerfil.png"
+        },
+        {
+          "id": 6,
+          "categoria": "Diseño Publicitario",
+          "nombre": "Folleto",
+          "precio": 57,
+          "descripcion": "Una forma sencilla de dar publicidad a una compañía, producto o servicio.",
+          "estado": "A",
+          "imagen": "Folleto.jpg"
+        },
+        {
+          "id": 7,
+          "categoria": "Fotografía Profesional",
+          "nombre": "Fotografía Indrustrial",
+          "precio": 48,
+          "descripcion": "Comunican a los posibles clientes los productos que fabrica la empresa, pero también los medios que tiene para fabricarlos",
+          "estado": "A",
+          "imagen": "FotografiaIndrustrial.jpg"
+        },
+        {
+          "id": 8,
+          "categoria": "Fotografía Profesional",
+          "nombre": "Fotografía Corporativa",
+          "precio": 83,
+          "descripcion": "Comunican a los posibles clientes los productos que fabrica la empresa, pero también los medios que tiene para fabricarlos",
+          "estado": "A",
+          "imagen": "FotografiaCorporativa.jpg"
+        },
+        {
+          "id": 9,
+          "categoria": "Fotografía Profesional",
+          "nombre": "Fotografía profesional",
+          "precio": 77,
+          "descripcion": "Este tipo de fotografía debe mostrar las diferencias competitivas de tus productos o capacidades profesionales a posibles clientes.",
+          "estado": "A",
+          "imagen": "https://orientacion.universia.edu.pe/imgs2011/imagenes/mar11729-2017_01_11_181026.jpg"
+        },
+        {
+          "id": 10,
+          "categoria": "Fotografía Profesional",
+          "nombre": "Sesiones fotográficas",
+          "precio": 51,
+          "descripcion": "A través de una sesión fotográfica de tu personal, donde puedas reflejar el perfil real de tus trabajadores y las instalaciones de tus oficinas.",
+          "estado": "A",
+          "imagen": "https://www.torresphotostudio.com/wp-content/uploads/2020/10/Slider-Sesion-de-Fotos-Corporativa-para-Empresas.jpg"
+        },
+        {
+          "id": 11,
+          "categoria": "Fotografía Profesional",
+          "nombre": "Sesiones preboda y boda",
+          "precio": 88,
+          "descripcion": "Sesiónes que realizamos con los novios unas semanas o incluso meses antes de que se realice la boda en sí.",
+          "estado": "A",
+          "imagen": "https://www.matrimonioperu.com/wp-content/uploads/2020/05/sesion-de-foto-preboda-novios.jpg"
+        },
+        {
+          "id": 12,
+          "categoria": "Fotografía Profesional",
+          "nombre": "Cobertura de eventos",
+          "precio": 100,
+          "descripcion": "Se trata de eventos empresariales realizados para fechas o acciones importantes, como aniversarios, lanzamientos de productos, cenas de fin de año e inauguraciones.",
+          "estado": "A",
+          "imagen": "https://www.marketeroslatam.com/wp-content/uploads/2017/09/live-stream-evento.jpg"
+        },
+        {
+          "id": 13,
+          "categoria": "Audio Visual",
+          "nombre": "Videos Corporativos",
+          "precio": 112,
+          "descripcion": "En la gran mayoría de las ocasiones, dichos objetivos son: Mostrar los valores corporativos de una empresa.",
+          "estado": "A",
+          "imagen": "https://video.wearecontent.com/wp-content/uploads/2022/03/Videos-corporativos.jpg"
+        },
+        {
+          "id": 14,
+          "categoria": "Audio Visual",
+          "nombre": "Videos Institucionales",
+          "precio": 54,
+          "descripcion": "Ayuda a reforzar la imagen que tu empresa quiere transmitir de su marca el enfoque está en presentar productos, servicios o la propia historia en un formato atractivo.",
+          "estado": "A",
+          "imagen": "https://maracuyacontenidos.com/blog/wp-content/uploads/2022/05/hacer-un-video-institucional-.png"
+        },
+        {
+          "id": 15,
+          "categoria": "Audio Visual",
+          "nombre": "Videos Publicitarios",
+          "precio": 96,
+          "descripcion": "Utilizamos la imagen y el audio para impactar con su mensaje a nuevas audiencias.",
+          "estado": "A",
+          "imagen": "https://video.wearecontent.com/wp-content/uploads/2022/05/videos-publicitarios.webp"
+        },
+        {
+          "id": 16,
+          "categoria": "Audio Visual",
+          "nombre": "Video de Marketing",
+          "precio": 82,
+          "descripcion": "Nuestro proposito es un lograr un vídeo con el fin de promocionar un producto o servicio para lograr objetivos dentro de una estrategia de marketing.",
+          "estado": "A",
+          "imagen": "https://www.wearemarketing.com/uploads/media/default/0001/21/9baeb3324480a60d5014f7c8bd23af9ce347ff15.jpeg"
+        },
+        {
+          "id": 17,
+          "categoria": "Audio Visual",
+          "nombre": "Spot publicitario",
+          "precio": 104,
+          "descripcion": "El soporte visual, auditivo o audiovisual de breve duración que transmite el mensaje, para hacerlo a llegar a mas clientes a tu negocio.",
+          "estado": "A",
+          "imagen": "https://static.mercadonegro.pe/wp-content/uploads/2017/08/22192529/JPG-1024x535.jpg"
+        },
+        {
+          "id": 18,
+          "categoria": "Audio Visual",
+          "nombre": "Filmaciones en Full ",
+          "precio": 54,
+          "descripcion": "Los mejore Videos en Full HD, un claro y nitida resolución de nada mas y menos que 4K, de la mejor calidad e excelencia en las ediciones c:",
+          "estado": "A",
+          "imagen": "https://media.tenor.com/5xR4cGLLntQAAAAM/patrick-crank-dat.gif"
+        }
+    ]
+} 
+     

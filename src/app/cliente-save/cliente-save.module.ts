@@ -4,18 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ClientesPageRoutingModule } from './clientes-routing.module';
+import { ClienteSavePageRoutingModule } from './cliente-save-routing.module';
 
-import { ClientesPage } from './clientes.page';
+import { ClienteSavePage } from './cliente-save.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ClientesPageRoutingModule,
+    ClienteSavePageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [ClientesPage]
+  declarations: [ClienteSavePage]
 })
-export class ClientesPageModule {}
+export class ClienteSavePageModule {}

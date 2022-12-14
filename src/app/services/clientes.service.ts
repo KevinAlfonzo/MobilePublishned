@@ -14,4 +14,13 @@ export class ClientesService {
   findAll() {
     return this.http.get<ClienteDto[]>(`${environment.apiURL}/clientes`);
   }
+
+  registrar(cliente: ClienteDto) {
+    return this.http.post<ClienteDto[]>(`${environment.apiURL}/clientes`, cliente);
+  }
+
+  finByName(nombre: string) {
+    return this.http.get<ClienteDto[]>(`${environment.apiURL}/clientes/nombre/${nombre}`);
+  }
+
 }

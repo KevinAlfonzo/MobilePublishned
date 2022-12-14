@@ -9,6 +9,8 @@ import { LoginDto } from '../dtos/login.dto';
 })
 export class AuthService {
 
+  url: string = environment.apiURL + 'Verificado';
+
   constructor(private http: HttpClient) {
   }
 

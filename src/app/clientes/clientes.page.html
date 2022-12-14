@@ -5,18 +5,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-content class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+  <ion-searchbar [formControl]="searchControl" placeholder="Buscar Cliente"></ion-searchbar>
+
+  <ion-button (click)="newCliente()">Nuevo Cliente</ion-button>
+
   <ion-list>
-    <ion-list-header>
-      <ion-label>Clientes</ion-label>
-    </ion-list-header>
     <ion-item *ngFor="let cliente of clientes">
       <ion-label>{{cliente.nombre}}, {{cliente.apellidopaterno}} {{cliente.apellidomaterno}}</ion-label>
     </ion-item>
   </ion-list>
-
-  <ion-fab>
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
