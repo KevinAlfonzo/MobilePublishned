@@ -1,0 +1,33 @@
+<ion-app>
+  <ion-menu menuId="main-content" contentId="main" *ngIf="isLogin">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="../assets/avatar/kisspng-communications-management-marketing-communications-service-one-digital-marketing-in-cambodia-phonm-pe-5cf4a9120f72a3 1.png">
+        <ion-label>
+          <h2>PUBLISHNED</h2>
+          <p>Agencia Publicitaria</p>
+        </ion-label>
+      </div>
+
+      <ion-list class="menu-items" line="none">
+        <ion-item (click)="clickEvent(0)" routerLink="/clientes">
+          <ion-icon [ngClass]="{'active' : isActive[0]}" name="people-outline"></ion-icon> Clientes
+        </ion-item>
+        <ion-item (click)="clickEvent(1)" routerLink="/empleados">
+          <ion-icon [ngClass]="{'active' : isActive[1]}" name="person-outline"></ion-icon> Empleados
+        </ion-item>
+        <ion-item (click)="clickEvent(2)" routerLink="/servicios">
+          <ion-icon [ngClass]="{'active' : isActive[2]}" name="file-tray-full-outline"></ion-icon> Servicios
+        </ion-item>
+        <ion-item (click)="clickEvent(3)" routerLink="/venta">
+          <ion-icon [ngClass]="{'active' : isActive[3]}" name="cart-outline"></ion-icon> Venta
+        </ion-item>
+        <ion-item (click)="clickEvent(4)">
+          <ion-icon [ngClass]="{'active' : isActive[4]}" name="exit-outline"></ion-icon> Cerrar Sesión
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main" (activate)="removerMenu()"></ion-router-outlet>
+</ion-app>

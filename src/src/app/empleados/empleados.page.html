@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Hola {{nombreUsuario}}!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-content class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+  <ion-searchbar [formControl]="searchControl" placeholder="Buscar Empleado"></ion-searchbar>
+
+  <ion-button (click)="newEmpleado()">Nuevo Empleado</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let empleado of empleados">
+      <ion-label>{{empleado.nombre}}, {{empleado.apellidopaterno}} {{empleado.apellidomaterno}}</ion-label>
+      <ion-button (click)="editarEmpleado(empleado)" color="success">Editar</ion-button>
+      <ion-button (click)="delete(empleado.id)" color="danger">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

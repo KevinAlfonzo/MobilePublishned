@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Venta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ventaForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Empleados</ion-label>
+        <ion-select formControlName="idempleado" interface="popover" placeholder="Seleccione el empleado">
+          <ion-select-option *ngFor="let empleado of empleados" [value]="empleado.id">{{empleado.apellidopaterno}} {{empleado.apellidomaterno}}, {{empleado.nombre}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Clientes</ion-label>
+        <ion-select formControlName="idcliente" interface="popover" placeholder="Seleccione el cliente">
+          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.id">{{cliente.apellidopaterno}} {{cliente.apellidomaterno}}, {{cliente.nombre}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </form>
+  <form [formGroup]="ventadetalleForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Servicios</ion-label>
+        <ion-select formControlName="idservicio" interface="popover" placeholder="Seleccione el servicio">
+          <ion-select-option *ngFor="let servicio of servicios" [value]="servicio">{{servicio.nombre}} === S/.{{servicio.precio}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label position="stacked">Cantidad</ion-label>
+      <ion-input formControlName="cantidad" placeholder="Ingrese la cantidad" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Notas</ion-label>
+      <ion-input formControlName="notas" placeholder="Ingrese algún requerimiento del cliente" type="text"></ion-input>
+    </ion-item>
+    <ion-button (click)="registrar()" color="primary">
+      <ion-icon slot="start" name="checkmark-outline"></ion-icon>
+      Registrar
+    </ion-button>
+  </form>
+</ion-content>
