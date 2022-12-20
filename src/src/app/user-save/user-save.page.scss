@@ -1,3 +1,14 @@
-.color {
+ion-toolbar {
     background-color: #EDEE60;
+}
+
+H2 {
+    text-align: center;
+    font-family: 'Inconsolata';
+    color: #000;
+    font-weight: bold;
+}
+
+ion-content::part(background) {
+    background: #F4F4BC;
 }

@@ -87,4 +87,8 @@ export class LoginPage implements OnInit {
     this.router.navigate(['user-save']).then();
   }
 
+  regresar() {
+    this.router.navigate(['inicio']).then();
+  }
+
 }
