@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { resetFakeAsyncZone } from '@angular/core/testing';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ConsoleLogger } from 'typedoc/dist/lib/utils';
 import { ClienteDto } from '../dtos/cliente.dto';
 import { EmpleadoDto } from '../dtos/empleado.dto';
@@ -26,14 +27,15 @@ export class VentaPage implements OnInit {
   ventadetalleForm: FormGroup = new FormGroup<any>({});
   nroVenta: any;
   servicio: any;
-  total: any;
+  total: any = 0;
 
   constructor(public empleadoService: EmpleadosService, 
               public clienteService: ClientesService, 
               public servicioService: ServiciosService,
               public ventaService: VentaService,
               public ventadetalleService: VentadetalleService,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder,
+              private route: Router) { }
 
   ngOnInit() {
     this.getEmpleados();
@@ -41,6 +43,7 @@ export class VentaPage implements OnInit {
     this.getServicios();
     this.initVentaForm();
     this.initVentaDetalleForm();
+
   }
 
   initVentaForm() {
@@ -68,6 +71,10 @@ export class VentaPage implements OnInit {
 
   }
 
+  navigateCarrito () {
+    this.route.navigate(['carrito']).then();
+  }
+
   getEmpleados() {
     this.empleadoService.findAll().subscribe(res => {
       this.empleados = res;
@@ -86,7 +93,40 @@ export class VentaPage implements OnInit {
     })
   }
 
-  registrar() {
+  /* registrarVentaDetalle() {
+    setTimeout(() => {
+      this.ventadetalleForm.controls['idventa'].setValue(this.nroVenta[0].NROVENTA + 1);
+      this.ventadetalleForm.controls['idservicio'].setValue(this.servicio.id);
+      this.ventadetalleForm.controls['subtotal'].setValue(this.total);
+      this.ventadetalleService.registrarVentaDetalle(this.ventadetalleForm.value).subscribe(res => {
+        console.log('Servicio vendido: ', res);
+      })
+    }, 3000);
+  } */
+
+  agregarServicio() {
+    this.servicio = this.ventadetalleForm.controls['idservicio'].value
+    let importe = this.ventadetalleForm.controls['cantidad'].value * this.servicio.precio
+    this.total = (this.ventadetalleForm.controls['cantidad'].value * this.servicio.precio) + this.total
+    this.ventaForm.controls['total'].setValue(this.total);
+    VentaService.datoscliente = this.ventaForm.value;
+    let datos = {
+      idservicio: this.servicio.id,
+      nombre: this.servicio.nombre,
+      categoria: this.servicio.categoria,
+      precio: importe,
+      cantidad: this.ventadetalleForm.controls['cantidad'].value,
+      notas: this.ventadetalleForm.controls['notas'].value
+    }
+    VentadetalleService.temporal.push(datos);
+    console.log('Enviando a carrito: ', VentadetalleService.temporal);
+    this.ventadetalleForm.reset();
+  }
+
+
+
+
+  /* registrar() {
     this.servicio = this.ventadetalleForm.controls['idservicio'].value
     this.total = this.ventadetalleForm.controls['cantidad'].value * this.servicio.precio
     this.ventaForm.controls['total'].setValue(this.total);
@@ -98,16 +138,6 @@ export class VentaPage implements OnInit {
     })
     this.registrarVentaDetalle();
   }
-
-  registrarVentaDetalle() {
-    setTimeout(() => {
-      this.ventadetalleForm.controls['idventa'].setValue(this.nroVenta[0].NROVENTA + 1);
-      this.ventadetalleForm.controls['idservicio'].setValue(this.servicio.id);
-      this.ventadetalleForm.controls['subtotal'].setValue(this.total);
-      this.ventadetalleService.registrarVentaDeatlle(this.ventadetalleForm.value).subscribe(res => {
-        console.log('Servicio vendido: ', res);
-      })
-    }, 3000);
-  }
+ */
 
 }

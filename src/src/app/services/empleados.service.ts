@@ -14,7 +14,7 @@ export class EmpleadosService {
   }
 
   findAll() {
-    return this.http.get<EmpleadoDto[]>(`${environment.apiURL}/empleados`);
+    return this.http.get<EmpleadoDto[]>(`${environment.apiURL}/empleados/cambio/A`);
   }
 
   registrar(empleado: EmpleadoDto) {

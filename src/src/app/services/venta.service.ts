@@ -7,10 +7,12 @@ import { environment } from 'src/environments/environment';
 })
 export class VentaService {
 
+  static datoscliente: any;
+
   constructor(private http: HttpClient) { }
 
-  registrarVenta(venta:any){
-    return this.http.post(`${environment.apiURL}/venta`,venta)
+  registrarVenta(datos: any){
+    return this.http.post(`${environment.apiURL}/venta`, datos)
   }
 
 }

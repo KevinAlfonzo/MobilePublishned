@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { debounceTime, switchMap } from 'rxjs';
 import { ServicioDto } from '../dtos/servicio.dto';
 import { ServiciosService } from '../services/servicios.service';
@@ -11,10 +12,10 @@ import { ServiciosService } from '../services/servicios.service';
 })
 export class ServiciosPage implements OnInit {
 
-  servicios: ServicioDto[] = [];
+  servicios: any;
   searchControl: FormControl = new FormControl<any>('');
 
-  constructor(private servicioService: ServiciosService) { }
+  constructor(private servicioService: ServiciosService, private route: Router) { }
 
   ngOnInit() {
     this.getServicios();

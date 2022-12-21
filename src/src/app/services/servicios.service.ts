@@ -8,6 +8,8 @@ import { ServicioDto } from '../dtos/servicio.dto';
 })
 export class ServiciosService {
 
+  servicioSeleccionado: ServicioDto | undefined;
+
   constructor(private http: HttpClient) {
   }
 

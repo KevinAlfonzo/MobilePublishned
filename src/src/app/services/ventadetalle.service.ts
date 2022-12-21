@@ -17,7 +17,7 @@ export class VentadetalleService {
     VentadetalleService.temporal.push(datos);
   }
 
-  registrarVentaDeatlle(ventadetalle:VentaDetalleDto){
+  registrarVentaDetalle(ventadetalle: any){
     return this.http.post<VentaDetalleDto>(`${environment.apiURL}/ventadetalle`, ventadetalle);
   }
 

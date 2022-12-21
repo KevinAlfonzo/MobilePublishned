@@ -9,7 +9,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit{
 
-  isActive = [false, false, false, false, false];
+  isActive = [false, false, false, false, false, false];
   isLogin: boolean;
   url: any;
   
@@ -23,11 +23,11 @@ export class AppComponent implements OnInit{
 
   clickEvent(index: number) {
     if (!this.isActive[index]) {
-      this.isActive = new Array(false, false, false, false, false);
+      this.isActive = new Array(false, false, false, false, false, false);
       this.isActive[index] = true;
     }
 
-    if (index == 4) {
+    if (index == 5) {
       this.authService.deleteSession;
       this.router.navigate(['/login']).then(() => {
         window.location.reload();
@@ -43,5 +43,4 @@ export class AppComponent implements OnInit{
       this.isLogin = true;
     }
   }
-
 }

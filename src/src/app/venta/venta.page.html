@@ -6,6 +6,8 @@
 
 <ion-content>
   <form [formGroup]="ventaForm">
+    <br>
+    <br>
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Empleados</ion-label>
@@ -14,6 +16,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+    <br>
+    <br>
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Clientes</ion-label>
@@ -24,6 +28,8 @@
     </ion-list>
   </form>
   <form [formGroup]="ventadetalleForm">
+    <br>
+    <br>
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Servicios</ion-label>
@@ -32,17 +38,28 @@
         </ion-select>
       </ion-item>
     </ion-list>
+    <br>
+    <br>
     <ion-item>
       <ion-label position="stacked">Cantidad</ion-label>
       <ion-input formControlName="cantidad" placeholder="Ingrese la cantidad" type="number"></ion-input>
     </ion-item>
+    <br>
+    <br>
     <ion-item>
       <ion-label position="stacked">Notas</ion-label>
       <ion-input formControlName="notas" placeholder="Ingrese algún requerimiento del cliente" type="text"></ion-input>
     </ion-item>
-    <ion-button (click)="registrar()" color="primary" style="padding-left: 27%;">
-      <ion-icon slot="start" name="checkmark-outline"></ion-icon>
-      Registrar
+    <br>
+    <br>
+    <ion-button style="padding-left: 18%;" (click)="navigateCarrito()" color="light">
+      <ion-icon slot="start" name="card-outline"></ion-icon>
+      Carrito
+    </ion-button>
+
+    <ion-button (click)="agregarServicio()">
+      <ion-icon slot="start" name="add-outline"></ion-icon>
+      Añadir
     </ion-button>
   </form>
 </ion-content>

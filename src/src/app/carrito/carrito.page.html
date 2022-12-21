@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PUBLISHNED</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Carrito</ion-card-title>
+      <ion-card-subtitle>Productos</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content *ngFor="let servicio of temporal">
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="../../assets/img/{{servicio.idservicio}}.jpg" />
+          </ion-thumbnail>
+          <ion-label>{{servicio.nombre}}</ion-label>
+          <ion-label>S/{{servicio.precio}}</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button color="success" (click)="registrarVenta()" style="padding-left: 30%;">
+    <ion-icon slot="start" name="checkmark-done-outline"></ion-icon>
+    Comprar
+  </ion-button>
+</ion-content>

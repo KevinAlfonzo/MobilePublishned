@@ -35,7 +35,6 @@ export class EmpleadosPage implements OnInit {
   delete(id: any) {
     this.empleadoService.delete(id).subscribe(res => {
       this.getEmpleados();
-      this.empleados = res;
     })
   }
 
